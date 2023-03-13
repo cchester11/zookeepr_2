@@ -1,6 +1,5 @@
 router = require('express').Router()
-const data =  require('../../data/data.json')
-// import helpers
+const { data } =  require('../../data/data.json')
 
 router.get('/animals', (req, res) => {
 
