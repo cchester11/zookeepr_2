@@ -5,7 +5,7 @@ const handleFormSubmission = function (event) {
       event.preventDefault()
 
       let animal = $(animal_form).find('[name="animal-name"]').val();
-      let species = animal_form.querySelector('[name="species"]').value;
+      let species = $(animal_form).find('[name="species"]').val();
       let diet_radio_input = animal_form.querySelectorAll('[name="diet"]');
       let diet;
 
@@ -17,3 +17,5 @@ const handleFormSubmission = function (event) {
 
       console.log(animal, species, diet)
 }
+
+$(animal_form).on('submit', handleFormSubmission);
