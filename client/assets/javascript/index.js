@@ -9,5 +9,11 @@ const handleFormSubmission = function (event) {
       let diet_radio_input = animal_form.querySelectorAll('[name="diet"]');
       let diet;
 
+      diet = diet_radio_input.find(input => input.checked)?.value || '';
+      if(diet === '') {
+            alert('please select a diet')
+            return;
+      }
 
+      console.log(animal, species, diet)
 }
